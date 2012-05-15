@@ -3,7 +3,7 @@ layout: post
 title: "开始记录"
 date: 2012-05-15 15:45
 comments: true
-categories: 生活
+categories: life
 ---
 
 天黑不闭眼
