@@ -3,11 +3,11 @@
 # ----------------------- #
 
 url: http://ashliu.github.com
-title: My Octopress Blog
-subtitle: A blogging framework for hackers.
-author: Your Name
+title: Ash's Blog
+subtitle: Ash's Blog
+author: Ash
 simple_search: http://google.com/search
-description:
+description: 知行合一
 
 # Default date format is "ordinal" (resulting in "July 22nd 2007")
 # You can customize the format as defined in
