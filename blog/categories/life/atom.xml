@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: 生活 | Ash's Blog]]></title>
-  <link href="http://ashliu.github.com/blog/categories/%E7%94%9F%E6%B4%BB/atom.xml" rel="self"/>
+  <title><![CDATA[Category: life | Ash's Blog]]></title>
+  <link href="http://ashliu.github.com/blog/categories/life/atom.xml" rel="self"/>
   <link href="http://ashliu.github.com/"/>
-  <updated>2012-05-15T22:13:22+08:00</updated>
+  <updated>2012-05-15T22:26:52+08:00</updated>
   <id>http://ashliu.github.com/</id>
   <author>
     <name><![CDATA[Ash]]></name>
