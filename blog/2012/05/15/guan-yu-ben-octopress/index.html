@@ -5,11 +5,12 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Category: life - Ash's Blog</title>
+  <title>关于本octopress - Ash's Blog</title>
   <meta name="author" content="Ash">
 
   
-  <meta name="description" content="Category: life">
+  <meta name="description" content="记录下本octopress的搭建过程，全当做备忘。 基本startup 我的环境是fedora，所以是直接参考的官方文档，简单方便，见这里。如果是windows环境，那么请果断google吧，很多前人已经总结的很好了。
+这里记录下我犯的一个错误：在按照教程step by step的过程中， &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +19,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://ashliu.github.comblog/categories/life">
+  <link rel="canonical" href="http://ashliu.github.com/blog/2012/05/15/guan-yu-ben-octopress">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -63,36 +64,116 @@
   <div id="main">
     <div id="content">
       <div>
-<article role="article">
+<article class="hentry" role="article">
   
   <header>
-    <h1 class="entry-title">Category: Life</h1>
+    
+      <h1 class="entry-title">关于本octopress</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-05-15T22:32:00+08:00" pubdate data-updated="true">May 15<span>th</span>, 2012</time>
+        
+         | <a href="#disqus_thread">Comments</a>
+        
+      </p>
     
   </header>
-  
-  <div id="blog-archives" class="category">
 
 
-
-  
-  <h2>2012</h2>
-
-<article>
-  
-<h1><a href="/blog/2012/05/15/kai-shi-ji-lu/">开始记录</a></h1>
-<time datetime="2012-05-15T15:45:00+08:00" pubdate><span class='month'>May</span> <span class='day'>15</span> <span class='year'>2012</span></time>
-
-<footer>
-  <span class="categories">posted in <a class='category' href='/blog/categories/life/'>life</a></span>
-</footer>
+<div class="entry-content"><blockquote><p>记录下本octopress的搭建过程，全当做备忘。</p></blockquote>
 
 
-</article>
+<h3>基本startup</h3>
+
+<p>我的环境是fedora，所以是直接参考的官方文档，简单方便，见<a href="http://octopress.org/docs/setup/">这里</a>。如果是windows环境，那么请果断google吧，很多前人已经总结的很好了。
+这里记录下我犯的一个错误：在按照教程step by step的过程中，我执行了如下命令：
+‘’‘
+git add .
+git commit -m &#8216;your message&#8217;
+git push origin source
+’‘’
+然后我写了post，并deploy到github，我以为我的源文件也一起被commit到了source分支，所以就没有再次执行上面的命令。结果是我在其他地方clone后发现根本就没有之前写的post！汗，所以写完post后，别忘记了执行上面的命令。</p>
+
+<h3>插件</h3>
+
+<ul>
+<li>评论插件。我用的disqus，在<a href="disqus.com">disqus.com</a>注册账户，并设置好site，并得到唯一的短名字。然后在_config.yml中打开disqus_show_comment_count，并设置disqus_short_name为前面得到的短名字即可。</li>
+<li>侧边栏最近评论。同样是使用的disqus，可以参考<a href="http://chen.yanping.me/cn/blog/2012/02/07/comment-sidebar/">这里</a></li>
+<li>图片外链。这个我难得找，直接使用的国内的，<a href="http://tu.6.cn/">六间房</a>，蛮方便的，但是感觉速度一般。</li>
+<li>分享。这个我使用的是<a href="http://www.jiathis.com/">加网</a>的服务，都不用注册，简单方便。</li>
+<li>侧边栏标签。这个折腾了一会儿，想搞成中文的，但是没有成功，就放弃了，之用E文算了，反正我的标签也不多。</li>
+</ul>
 
 </div>
 
+
+  <footer>
+    <p class="meta">
+      
   
+
+<span class="byline author vcard">Posted by <span class="fn">Ash</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-05-15T22:32:00+08:00" pubdate data-updated="true">May 15<span>th</span>, 2012</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/technology/'>technology</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://ashliu.github.com/blog/2012/05/15/guan-yu-ben-octopress/" data-via="" data-counturl="http://ashliu.github.com/blog/2012/05/15/guan-yu-ben-octopress/" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2012/05/15/kai-shi-ji-lu/" title="Previous Post: 开始记录">&laquo; 开始记录</a>
+      
+      
+    </p>
+  </footer>
 </article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
 
 </div>
 
@@ -153,7 +234,10 @@
       var disqus_shortname = 'ash-s-blog';
       
         
-        var disqus_script = 'count.js';
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://ashliu.github.com/blog/2012/05/15/guan-yu-ben-octopress/';
+        var disqus_url = 'http://ashliu.github.com/blog/2012/05/15/guan-yu-ben-octopress/';
+        var disqus_script = 'embed.js';
       
     (function () {
       var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
