@@ -99,17 +99,19 @@
 
 <p>这个很简单，参考官方的<a href="http://www.eluaproject.net/doc/v0.8/en_building.html">教程</a>即可。教程不是fedora的，但是都大同小异。toolchain使用的是官方推荐的版本，下载地址在<a href="https://sourcery.mentor.com/public/gnu_toolchain/arm-none-eabi/arm-2009q3-68-arm-none-eabi.bin">这里</a>。</p>
 
-<p>扒拉扒拉下载安装完毕后，要记得把toolchain的路径加入到path环境变量。下载最新的elua源码，直接进入就可以使用scons编译了，我是的lm3s8962的demo板子，所以直接使用
-‘’‘
-scons cpu=lm3s8962 prog
-’‘’
-会生成两个文件，一个是elf格式的；另一个是bin档，用来直接写入flash，ok，我们需要的就是这个。</p>
+<p>扒拉扒拉下载安装完毕后，要记得把toolchain的路径加入到path环境变量。下载最新的elua源码，直接进入就可以使用scons编译了，我是lm3s8962的demo板子，所以直接使用</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>scons cpu=lm3s8962 prog</span></code></pre></td></tr></table></div></figure>
+
+
+<p>会生成两个文件，一个是elf格式的；另一个是bin档，用来直接写入flash，ok，我们需要的就是这个。</p>
 
 <h3>jlink下载</h3>
 
 <ul>
-<li>首先是安装jlink驱动。上网一查，两中方式：其一使用openocd，我参考了好些人说的配置文件，始终有错误，果断放弃。其二是使用segger官方的linux驱动，在<a href="http://www.segger.com/cms/jlink-software.html?step=&amp;file=JLinkLinux_441g&amp;serial=">这里</a>，选择linux版本即可，其中他会要求你输入序列号，随便写几个数就可以了，别当真：）。 下载后，安装之。插上你的jlink然后运行start文件。</li>
-<li>一切顺利的话，会进入jlink的shell，并有如下提示</li>
+<li><p>首先是安装jlink驱动。上网一查，两中方式：其一使用openocd，我参考了好些人说的配置文件，始终有错误，果断放弃。其二是使用segger官方的linux驱动，在<a href="http://www.segger.com/cms/jlink-software.html?step=&amp;file=JLinkLinux_441g&amp;serial=">这里</a>，选择linux版本即可，其中他会要求你输入序列号，随便写几个数就可以了，别当真：）。 下载后，安装之。插上你的jlink然后运行start文件。</p></li>
+<li><p>一切顺利的话，会进入jlink的shell，并有如下提示</p></li>
 </ul>
 
 
