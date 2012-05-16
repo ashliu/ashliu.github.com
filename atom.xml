@@ -4,7 +4,7 @@
   <title><![CDATA[Ash's Blog]]></title>
   <link href="http://ashliu.github.com/atom.xml" rel="self"/>
   <link href="http://ashliu.github.com/"/>
-  <updated>2012-05-17T01:18:26+08:00</updated>
+  <updated>2012-05-17T01:20:16+08:00</updated>
   <id>http://ashliu.github.com/</id>
   <author>
     <name><![CDATA[Ash]]></name>
@@ -113,22 +113,26 @@
 
 <p>我的环境是fedora，所以是直接参考的官方文档，简单方便，见<a href="http://octopress.org/docs/setup/">这里</a>。如果是windows环境，那么请果断google吧，很多前人已经总结的很好了。</p>
 
-<p>这里记录下我犯的一个错误：在按照教程step by step的过程中，我执行了如下命令：
-‘’‘
-git add .
-git commit -m &#8216;your message&#8217;
-git push origin source
-’‘’
-然后我写了post，并deploy到github，我以为我的源文件也一起被commit到了source分支，所以就没有再次执行上面的命令。结果是我在其他地方clone后发现根本就没有之前写的post！汗，所以写完post后，别忘记了执行上面的命令。</p>
+<p>这里记录下我犯的一个错误：在按照教程step by step的过程中，我执行了如下命令：</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>git add .
+</span><span class='line'>git commit -m 'your message'
+</span><span class='line'>git push origin source</span></code></pre></td></tr></table></div></figure>
+
+
+<p>然后我写了post，并deploy到github，我以为我的源文件也一起被commit到了source分支，所以就没有再次执行上面的命令。结果是我在其他地方clone后发现根本就没有之前写的post！汗，所以写完post后，别忘记了执行上面的命令。</p>
 
 <h3>插件</h3>
 
 <ul>
-<li>评论插件。我用的disqus，在<a href="disqus.com">disqus.com</a>注册账户，并设置好site，并得到唯一的短名字。然后在_config.yml中打开disqus_show_comment_count，并设置disqus_short_name为前面得到的短名字即可。</li>
-<li>侧边栏最近评论。同样是使用的disqus，可以参考<a href="http://chen.yanping.me/cn/blog/2012/02/07/comment-sidebar/">这里</a></li>
-<li>图片外链。这个我难得找，直接使用的国内的，<a href="http://tu.6.cn/">六间房</a>，蛮方便的，但是感觉速度一般。</li>
-<li>分享。这个我使用的是<a href="http://www.jiathis.com/">加网</a>的服务，都不用注册，简单方便。</li>
-<li>侧边栏标签。这个折腾了一会儿，想搞成中文的，但是没有成功，就放弃了，只用E文算了，反正我的标签也不多。</li>
+<li><p>评论插件。我用的disqus，在<a href="disqus.com">disqus.com</a>注册账户，并设置好site，并得到唯一的短名字。然后在_config.yml中打开disqus_show_comment_count，并设置disqus_short_name为前面得到的短名字即可。</p></li>
+<li><p>侧边栏最近评论。同样是使用的disqus，可以参考<a href="http://chen.yanping.me/cn/blog/2012/02/07/comment-sidebar/">这里</a></p></li>
+<li><p>图片外链。这个我难得找，直接使用的国内的，<a href="http://tu.6.cn/">六间房</a>，蛮方便的，但是感觉速度一般。</p></li>
+<li><p>分享。这个我使用的是<a href="http://www.jiathis.com/">加网</a>的服务，都不用注册，简单方便。</p></li>
+<li><p>侧边栏标签。这个折腾了一会儿，想搞成中文的，但是没有成功，就放弃了，只用E文算了，反正我的标签也不多。</p></li>
 </ul>
 
 ]]></content>
