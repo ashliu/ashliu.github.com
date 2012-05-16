@@ -5,7 +5,7 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Ash's Blog</title>
+  <title>elua in fedora - Ash's Blog</title>
   <meta name="author" content="Ash">
 
   
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://ashliu.github.com">
+  <link rel="canonical" href="http://ashliu.github.com/blog/2012/05/17/elua-in-fedora">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -62,15 +62,12 @@
 </nav>
   <div id="main">
     <div id="content">
-      <div class="blog-index">
+      <div>
+<article class="hentry" role="article">
   
-  
-  
-    <article>
-      
   <header>
     
-      <h1 class="entry-title"><a href="/blog/2012/05/17/elua-in-fedora/">Elua in Fedora</a></h1>
+      <h1 class="entry-title">Elua in Fedora</h1>
     
     
       <p class="meta">
@@ -88,14 +85,14 @@
 
 <time datetime="2012-05-17T00:49:00+08:00" pubdate data-updated="true">May 17<span>th</span>, 2012</time>
         
-         | <a href="/blog/2012/05/17/elua-in-fedora/#disqus_thread">Comments</a>
+         | <a href="#disqus_thread">Comments</a>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><blockquote><p>太晚了，先暂时记录下，不准备写的很详细。</p></blockquote>
+<div class="entry-content"><blockquote><p>太晚了，先暂时记录下，不准备写的很详细。</p></blockquote>
 
 
 <h3>elua编译环境</h3>
@@ -149,84 +146,16 @@ g   &#8211;> go
 
 
 </div>
-  
-  
 
 
-    </article>
-  
-  
-    <article>
+  <footer>
+    <p class="meta">
       
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/05/15/guan-yu-ben-octopress/">关于本octopress</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
   
 
+<span class="byline author vcard">Posted by <span class="fn">Ash</span></span>
 
-<time datetime="2012-05-15T22:32:00+08:00" pubdate data-updated="true">May 15<span>th</span>, 2012</time>
-        
-         | <a href="/blog/2012/05/15/guan-yu-ben-octopress/#disqus_thread">Comments</a>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><blockquote><p>记录下本octopress的搭建过程，全当做备忘。</p></blockquote>
-
-
-<h3>基本startup</h3>
-
-<p>我的环境是fedora，所以是直接参考的官方文档，简单方便，见<a href="http://octopress.org/docs/setup/">这里</a>。如果是windows环境，那么请果断google吧，很多前人已经总结的很好了。</p>
-
-<p>这里记录下我犯的一个错误：在按照教程step by step的过程中，我执行了如下命令：
-‘’‘
-git add .
-git commit -m &#8216;your message&#8217;
-git push origin source
-’‘’
-然后我写了post，并deploy到github，我以为我的源文件也一起被commit到了source分支，所以就没有再次执行上面的命令。结果是我在其他地方clone后发现根本就没有之前写的post！汗，所以写完post后，别忘记了执行上面的命令。</p>
-
-<h3>插件</h3>
-
-<ul>
-<li>评论插件。我用的disqus，在<a href="disqus.com">disqus.com</a>注册账户，并设置好site，并得到唯一的短名字。然后在_config.yml中打开disqus_show_comment_count，并设置disqus_short_name为前面得到的短名字即可。</li>
-<li>侧边栏最近评论。同样是使用的disqus，可以参考<a href="http://chen.yanping.me/cn/blog/2012/02/07/comment-sidebar/">这里</a></li>
-<li>图片外链。这个我难得找，直接使用的国内的，<a href="http://tu.6.cn/">六间房</a>，蛮方便的，但是感觉速度一般。</li>
-<li>分享。这个我使用的是<a href="http://www.jiathis.com/">加网</a>的服务，都不用注册，简单方便。</li>
-<li>侧边栏标签。这个折腾了一会儿，想搞成中文的，但是没有成功，就放弃了，只用E文算了，反正我的标签也不多。</li>
-</ul>
-
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
       
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/05/15/kai-shi-ji-lu/">开始记录</a></h1>
-    
-    
-      <p class="meta">
-        
 
 
 
@@ -238,55 +167,38 @@ git push origin source
   
 
 
-<time datetime="2012-05-15T15:45:00+08:00" pubdate data-updated="true">May 15<span>th</span>, 2012</time>
-        
-         | <a href="/blog/2012/05/15/kai-shi-ji-lu/#disqus_thread">Comments</a>
-        
-      </p>
+<time datetime="2012-05-17T00:49:00+08:00" pubdate data-updated="true">May 17<span>th</span>, 2012</time>
+      
+
+
+    </p>
     
-  </header>
-
-
-  <div class="entry-content"><h1>天黑不闭眼</h1>
-
-<h3>写在当下</h3>
-
-<p>当激情开始退怯，当思维开始迟钝，当我以不再年少，没了乐趣去追寻各种稀奇古怪，折腾好玩的东西。我知道，我应该停下来，好好反思反思了。
-我觉得创新的动力在于融合，在于左右摇摆之间，思维瞬间失去桎梏，并发出的一闪灵光。我好这一口，也很享受这么个过程。有没有创新思维，
-有没有丰富的灵感，与智力无关，与经验无关。点滴一念间，有或者没有，它都在那里，等你去邂逅。</p>
-
-<p>我已经忘了我刚想说什么，这个不重要，重要的是，是否有留下。是，心安，即可。</p>
-
-<h3>准备之后写点什么</h3>
-
-<p>还真不知道写什么的好，没文才，没技术，没感悟的三无伪技术吊丝男，内容像那个啥一般枯竭(才有看不二，啊弥陀佛。)，纯粹的装B装文雅，在
-weibo着不到归属感，社交网络无爱的情况下，自娱自乐，了以记事，他日默然的时候，回首看看，也算一种安慰吧。或感幸哉。</p>
-
-<ul>
-<li>纯技术类，大多是自学自用的东西，用自己的语言山寨他人的成果；</li>
-<li>公司类，聊一聊公司中的一些事情；</li>
-<li>生活类，喜怒哀乐，尽在其中；</li>
-</ul>
-
-
-<h3>有那么一句话</h3>
-
-<p>我都已经不记得是什么时候听说的了： “晚上不想睡觉的男人，心有不甘”，深以为然！</p>
-
-<p>另，感谢octopress和github提供的技术和平台。</p>
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://ashliu.github.com/blog/2012/05/17/elua-in-fedora/" data-via="" data-counturl="http://ashliu.github.com/blog/2012/05/17/elua-in-fedora/" >Tweet</a>
+  
+  
+  
 </div>
-  
-  
 
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2012/05/15/guan-yu-ben-octopress/" title="Previous Post: 关于本octopress">&laquo; 关于本octopress</a>
+      
+      
+    </p>
+  </footer>
+</article>
 
-    </article>
-  
-  <div class="pagination">
-    
-    <a href="/blog/archives">Blog Archives</a>
-    
-  </div>
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 </div>
+  </section>
+
+</div>
+
 <aside class="sidebar">
   
     <section>
@@ -333,6 +245,7 @@ weibo着不到归属感，社交网络无爱的情况下，自娱自乐，了以
   
 </aside>
 
+
     </div>
   </div>
   <footer role="contentinfo"><p>
@@ -347,7 +260,10 @@ weibo着不到归属感，社交网络无爱的情况下，自娱自乐，了以
       var disqus_shortname = 'ash-s-blog';
       
         
-        var disqus_script = 'count.js';
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://ashliu.github.com/blog/2012/05/17/elua-in-fedora/';
+        var disqus_url = 'http://ashliu.github.com/blog/2012/05/17/elua-in-fedora/';
+        var disqus_script = 'embed.js';
       
     (function () {
       var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
