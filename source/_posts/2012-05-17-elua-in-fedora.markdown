@@ -3,7 +3,7 @@ layout: post
 title: "elua in fedora"
 date: 2012-05-17 00:49
 comments: true
-categories: 
+categories: technology
 ---
 
 {% blockquote %}
