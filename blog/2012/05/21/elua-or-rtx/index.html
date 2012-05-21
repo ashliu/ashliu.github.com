@@ -5,12 +5,13 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>开始记录 - Ash's Blog</title>
+  <title>elua or rtx ? - Ash's Blog</title>
   <meta name="author" content="Ash">
 
   
-  <meta name="description" content="天黑不闭眼 写在当下 当激情开始退怯，当思维开始迟钝，当我以不再年少，没了乐趣去追寻各种稀奇古怪，折腾好玩的东西。我知道，我应该停下来，好好反思反思了。
-我觉得创新的动力在于融合，在于左右摇摆之间，思维瞬间失去桎梏，并发出的一闪灵光。我好这一口，也很享受这么个过程。有没有创新思维， &hellip;">
+  <meta name="description" content="背景 最近又是要做一个简单的demo，手机控制家电的那种，之前已经有做过了，但是没有演示，后来无人问津这件事，也就没了后文慢慢被忘记了。现在公司这边继续运营，Dr cao又提到了这个demo，
+想让我再次搞起来，所以就有了这个选择评估。 大致结构 整个系统里面有三个角色：
++ 控制终端，这里是手机 &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -19,7 +20,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://ashliu.github.com/blog/2012/05/15/kai-shi-ji-lu">
+  <link rel="canonical" href="http://ashliu.github.com/blog/2012/05/21/elua-or-rtx">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -68,7 +69,7 @@
   
   <header>
     
-      <h1 class="entry-title">开始记录</h1>
+      <h1 class="entry-title">Elua or Rtx ?</h1>
     
     
       <p class="meta">
@@ -84,7 +85,7 @@
   
 
 
-<time datetime="2012-05-15T15:45:00+08:00" pubdate data-updated="true">May 15<span>th</span>, 2012</time>
+<time datetime="2012-05-21T23:04:00+08:00" pubdate data-updated="true">May 21<span>st</span>, 2012</time>
         
          | <a href="#disqus_thread">Comments</a>
         
@@ -93,33 +94,35 @@
   </header>
 
 
-<div class="entry-content"><h1>天黑不闭眼</h1>
+<div class="entry-content"><h3>背景</h3>
 
-<h3>写在当下</h3>
+<p>最近又是要做一个简单的demo，手机控制家电的那种，之前已经有做过了，但是没有演示，后来无人问津这件事，也就没了后文慢慢被忘记了。现在公司这边继续运营，Dr cao又提到了这个demo，
+想让我再次搞起来，所以就有了这个选择评估。</p>
 
-<p>当激情开始退怯，当思维开始迟钝，当我以不再年少，没了乐趣去追寻各种稀奇古怪，折腾好玩的东西。我知道，我应该停下来，好好反思反思了。
-我觉得创新的动力在于融合，在于左右摇摆之间，思维瞬间失去桎梏，并发出的一闪灵光。我好这一口，也很享受这么个过程。有没有创新思维，
-有没有丰富的灵感，与智力无关，与经验无关。点滴一念间，有或者没有，它都在那里，等你去邂逅。</p>
+<h3>大致结构</h3>
 
-<p>我已经忘了我刚想说什么，这个不重要，重要的是，是否有留下。是，心安，即可。</p>
+<p>整个系统里面有三个角色：
++ 控制终端，这里是手机，android平台；
++ 控制网关，lm3s8962的一块demo板，对上提供控制终端的访问接口，对下实现对执行器的控制；
++ 执行器，三种类型的执行器：IO控制的继电器，红外发射器，以及用RS232控制的HDMI矩阵；
+现在的实现很简单，做了一个勉强能用的协议，控制终端下达这个协议给网关，网关啥也不干，仅仅解析这个协议，并转化成对应的执行器命令，并控制执行器做对应的操作即可。
+elua和rtx都是跑在lm3s8962上的，两者感觉都能完成功能，各有长短吧。</p>
 
-<h3>准备之后写点什么</h3>
+<h3>rtx</h3>
 
-<p>还真不知道写什么的好，没文才，没技术，没感悟的三无伪技术吊丝男，内容像那个啥一般枯竭(才有看不二，啊弥陀佛。)，纯粹的装B装文雅，在
-weibo着不到归属感，社交网络无爱的情况下，自娱自乐，了以记事，他日默然的时候，回首看看，也算一种安慰吧。或感幸哉。</p>
+<p>keil公司提供的中间件，我觉得是蛮不错的一个东西，基本上你想要的，它都提供了，特别是文档，写的很完备，毕竟是商业产品，用起来很贴心。之前我就是用rtx来实现的功能，真心的快速：有了driverlib，
+基本上不用看芯片手册，有了rtx，更是不用管网络，文件系统等等玩意。有如各种神器在手，只用关心上层的业务逻辑，干起来真是快刀斩流水。
+不好的一面就是闭源的，出了问题根本没法找，而且很多隐晦的东西，文档不说，你压根就没法弄明白。</p>
 
-<ul>
-<li>纯技术类，大多是自学自用的东西，用自己的语言山寨他人的成果；</li>
-<li>公司类，聊一聊公司中的一些事情；</li>
-<li>生活类，喜怒哀乐，尽在其中；</li>
-</ul>
+<h3>elua</h3>
 
+<p>我为什么想到用elua？ 因为我想在后期增强网关的功能，能够自动执行一些用户定义的逻辑。首先想到的解法当然是搞一个配置文件，文件里面自定义一套语法来表达这个逻辑，然后网关来解析这个逻辑，很老套的
+做法。后来我想与其自己乱七八遭搞一堆东西，还不如直接来一个可执行的文件，网关可以直接执行这个配置文件，这多酷，于是就想到了elua。
+把elua的demo跑了一圈，大体还是很满意的，唯一不爽的就是对网络的支持，感觉还是demo太少了，或许直接找uip的可能多点，但是没沉下心来看。</p>
 
-<h3>有那么一句话</h3>
+<h3>选择</h3>
 
-<p>我都已经不记得是什么时候听说的了： “晚上不想睡觉的男人，心有不甘”，深以为然！</p>
-
-<p>另，感谢octopress和github提供的技术和平台。</p>
+<p>最终还是使用了rtx，最大的原因是时间问题，这个demo很快就要用了，我怕用elua的话来不及。但是，从长远看，我还是喜欢elua多点，应该会一直关注。当然了，如果你是刚开始玩的新手，或者不喜欢折腾，那还是果断rtx吧。</p>
 </div>
 
 
@@ -142,21 +145,15 @@ weibo着不到归属感，社交网络无爱的情况下，自娱自乐，了以
   
 
 
-<time datetime="2012-05-15T15:45:00+08:00" pubdate data-updated="true">May 15<span>th</span>, 2012</time>
+<time datetime="2012-05-21T23:04:00+08:00" pubdate data-updated="true">May 21<span>st</span>, 2012</time>
       
-
-<span class="categories">
-  
-    <a class='category' href='/blog/categories/life/'>life</a>
-  
-</span>
 
 
     </p>
     
       <div class="sharing">
   
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://ashliu.github.com/blog/2012/05/15/kai-shi-ji-lu/" data-via="" data-counturl="http://ashliu.github.com/blog/2012/05/15/kai-shi-ji-lu/" >Tweet</a>
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://ashliu.github.com/blog/2012/05/21/elua-or-rtx/" data-via="" data-counturl="http://ashliu.github.com/blog/2012/05/21/elua-or-rtx/" >Tweet</a>
   
   
   
@@ -165,8 +162,8 @@ weibo着不到归属感，社交网络无爱的情况下，自娱自乐，了以
     
     <p class="meta">
       
+        <a class="basic-alignment left" href="/blog/2012/05/17/elua-in-fedora/" title="Previous Post: elua in fedora">&laquo; elua in fedora</a>
       
-        <a class="basic-alignment right" href="/blog/2012/05/15/guan-yu-ben-octopress/" title="Next Post: 关于本octopress">关于本octopress &raquo;</a>
       
     </p>
   </footer>
@@ -246,8 +243,8 @@ weibo着不到归属感，社交网络无爱的情况下，自娱自乐，了以
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://ashliu.github.com/blog/2012/05/15/kai-shi-ji-lu/';
-        var disqus_url = 'http://ashliu.github.com/blog/2012/05/15/kai-shi-ji-lu/';
+        var disqus_identifier = 'http://ashliu.github.com/blog/2012/05/21/elua-or-rtx/';
+        var disqus_url = 'http://ashliu.github.com/blog/2012/05/21/elua-or-rtx/';
         var disqus_script = 'embed.js';
       
     (function () {

@@ -4,7 +4,7 @@
   <title><![CDATA[Ash's Blog]]></title>
   <link href="http://ashliu.github.com/atom.xml" rel="self"/>
   <link href="http://ashliu.github.com/"/>
-  <updated>2012-05-17T01:20:41+08:00</updated>
+  <updated>2012-05-21T23:47:08+08:00</updated>
   <id>http://ashliu.github.com/</id>
   <author>
     <name><![CDATA[Ash]]></name>
@@ -12,6 +12,43 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[elua or rtx ?]]></title>
+    <link href="http://ashliu.github.com/blog/2012/05/21/elua-or-rtx/"/>
+    <updated>2012-05-21T23:04:00+08:00</updated>
+    <id>http://ashliu.github.com/blog/2012/05/21/elua-or-rtx</id>
+    <content type="html"><![CDATA[<h3>背景</h3>
+
+<p>最近又是要做一个简单的demo，手机控制家电的那种，之前已经有做过了，但是没有演示，后来无人问津这件事，也就没了后文慢慢被忘记了。现在公司这边继续运营，Dr cao又提到了这个demo，
+想让我再次搞起来，所以就有了这个选择评估。</p>
+
+<h3>大致结构</h3>
+
+<p>整个系统里面有三个角色：
++ 控制终端，这里是手机，android平台；
++ 控制网关，lm3s8962的一块demo板，对上提供控制终端的访问接口，对下实现对执行器的控制；
++ 执行器，三种类型的执行器：IO控制的继电器，红外发射器，以及用RS232控制的HDMI矩阵；
+现在的实现很简单，做了一个勉强能用的协议，控制终端下达这个协议给网关，网关啥也不干，仅仅解析这个协议，并转化成对应的执行器命令，并控制执行器做对应的操作即可。
+elua和rtx都是跑在lm3s8962上的，两者感觉都能完成功能，各有长短吧。</p>
+
+<h3>rtx</h3>
+
+<p>keil公司提供的中间件，我觉得是蛮不错的一个东西，基本上你想要的，它都提供了，特别是文档，写的很完备，毕竟是商业产品，用起来很贴心。之前我就是用rtx来实现的功能，真心的快速：有了driverlib，
+基本上不用看芯片手册，有了rtx，更是不用管网络，文件系统等等玩意。有如各种神器在手，只用关心上层的业务逻辑，干起来真是快刀斩流水。
+不好的一面就是闭源的，出了问题根本没法找，而且很多隐晦的东西，文档不说，你压根就没法弄明白。</p>
+
+<h3>elua</h3>
+
+<p>我为什么想到用elua？ 因为我想在后期增强网关的功能，能够自动执行一些用户定义的逻辑。首先想到的解法当然是搞一个配置文件，文件里面自定义一套语法来表达这个逻辑，然后网关来解析这个逻辑，很老套的
+做法。后来我想与其自己乱七八遭搞一堆东西，还不如直接来一个可执行的文件，网关可以直接执行这个配置文件，这多酷，于是就想到了elua。
+把elua的demo跑了一圈，大体还是很满意的，唯一不爽的就是对网络的支持，感觉还是demo太少了，或许直接找uip的可能多点，但是没沉下心来看。</p>
+
+<h3>选择</h3>
+
+<p>最终还是使用了rtx，最大的原因是时间问题，这个demo很快就要用了，我怕用elua的话来不及。但是，从长远看，我还是喜欢elua多点，应该会一直关注。当然了，如果你是刚开始玩的新手，或者不喜欢折腾，那还是果断rtx吧。</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[elua in fedora]]></title>
